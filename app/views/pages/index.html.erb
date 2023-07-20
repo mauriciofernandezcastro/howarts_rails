@@ -2,4 +2,8 @@
 <p>Find me in app/views/pages/index.html.erb</p>
 
 
-<%= params %>
+<% Character.all.each do |x| %>
+    Nombre: <%= x.name %><br>
+    Lugar: <%= x.location %><br>
+    Casa del mago: <%= x.house %><br><br>
+<% end %><br>
