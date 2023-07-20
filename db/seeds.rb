@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 # seeds.rb
 # seeds.rb
+
 require 'faker'
 
 # Limpiar la base de datos antes de agregar nuevos datos
@@ -16,9 +17,9 @@ Character.destroy_all
 # Método para generar datos ficticios de Harry Potter
 def generate_harry_potter_data
   20.times do
-    name = Faker::HarryPotter.character
-    location = Faker::HarryPotter.location
-    house = Faker::HarryPotter.house
+    name = Faker::Movies::HarryPotter.character
+    location = Faker::Movies::HarryPotter.location
+    house = Faker::Movies::HarryPotter.house
 
     Character.create!(
       name: name,
@@ -32,4 +33,3 @@ puts "Generando datos de Harry Potter..."
 generate_harry_potter_data
 
 puts "¡Datos de Harry Potter generados con éxito!"
-
